@@ -83,10 +83,10 @@ public:
     BankAccount(const string& owner, double initialBalance) {
         // TODO: Validate and set members
         if (initialBalance<0){
-            invalid_argument("Owner name cannot be empty");
+            throw invalid_argument("Owner name cannot be empty");
     }
         if (owner.empty()){
-            invalid_argument("initial balance cannot be negative");
+            throw invalid_argument("initial balance cannot be negative");
         }
         owner_=owner;
         balance_= initialBalance;
