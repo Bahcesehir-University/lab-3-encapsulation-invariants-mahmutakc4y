@@ -122,7 +122,7 @@ public:
          if (amount <=0 ){
             throw invalid_argument ("Withdrawal amount must be positive");
     }
-         if (amount > balance_){
+         if (amount < balance_){
             throw invalid_argument ("Insufficient funds");
          }
          balance_-=amount;
